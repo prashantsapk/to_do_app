@@ -22,4 +22,6 @@ urlpatterns = [
     path('',views.homepage_view,name='homepage'),
     path('addtask/',views.addtask_view,name='addtask'),
     path('deletetask/',views.deletetask_view,name='deletetask'),
+    path('edittask/',views.edittask_view,name="edittask"),
+    path('markcompleted/',views.markcompleted_view,name="markcompleted"),
 ]

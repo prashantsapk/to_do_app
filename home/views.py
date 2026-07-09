@@ -43,4 +43,33 @@ def deletetask_view(request):
 
     return redirect('homepage')
 
+
+def edittask_view(request):
+
+    id = request.GET.get('id2')
+
+    if request.method == "GET":
+        obj = get_object_or_404(tasks,id = id)
+        filledformobj = Form(instance = obj)
+    else:
+        obj = get_object_or_404(tasks,id = id)
+        newfilledform = Form(request.POST,instance = obj)
+        if newfilledform.is_valid():
+            newfilledform.save()
+        
+        return redirect('homepage')
+
+
+    return render(request,'edit_task.html',{'Form':filledformobj})
+
+
+
+def markcompleted_view(request):
+    id = request.POST.get('id1')
     
+    if request.method =="POST":
+        obj = get_object_or_404(tasks,id = id)
+        obj.status = 'completed'
+        obj.save()
+       
+    return redirect('homepage')

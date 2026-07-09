@@ -33,14 +33,20 @@
     <button type="sumbit" class="btn btn-primary">Delete</button>
     </form>
 
-    <button type="button" class="btn btn-primary">Edit</button>
-
-    <form method ="POST" action ="#" >
+     <form method = "get" action ="{% url 'edittask'%}">
       {% csrf_token %}
-      <input type = "hidden" value ="{{i.id}}" name = "id1"
-    <button type="button" class="btn btn-primary">mark completed</button>
+      <input type = "hidden" value = "{{i.id}}" name = "id2" >
+    <button type="sumbit" class="btn btn-primary"> Edit</button>
     </form>
 
+
+    <form method ="POST" action = "{% url 'markcompleted'%}"" >
+      {% csrf_token %}
+      <input type = "hidden" value ="{{i.id}}" name = "id1">
+    <button type="sumbit" class="btn btn-primary">mark completed</button>
+    </form>
+     
+   
 
     </p>
   

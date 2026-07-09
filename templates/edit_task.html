@@ -8,13 +8,13 @@
   </head>
   <body>
 
-    <h1>Add Tasks</h1> 
+    <h1>Edit Task</h1> <br>
     
-    <form method = "POST" >
+    <form method = "POST">
     {% csrf_token %}
     Tittle : {{Form.tittle}}<br><br>
     Description : {{Form.detail}}<br><br>
-    <button type="sumbit" class="btn btn-primary">Add Task</button>
+    <button type="sumbit" class="btn btn-primary">Edit Task</button>
     </form>
     
     
