@@ -28,4 +28,4 @@ A simple and clean To Do application built to manage daily tasks efficiently.
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/to_do_app.git
+git clone https://github.com/prashantsapk/to_do_app.git
